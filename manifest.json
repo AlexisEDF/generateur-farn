@@ -1,0 +1,21 @@
+{
+    "name": "Générateur Code-barres FARN",
+    "short_name": "FARN Stock",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#5d7ad2",
+    "theme_color": "#5d7ad2",
+    "icons": [
+      {
+        "src": "logo-edf.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "logo-edf.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

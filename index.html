@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5d7ad2">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDF - FARN Générateur de code-barres</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    
+    <section>
+
+        <section>
+            <div id="dark_mode_toggle" onclick="toggleDarkMode()" style="align-self: flex-end; cursor: pointer; font-size: 20px;">🌙</div>
+        <img src="logo-edf.png" alt="Logo EDF" class="logo-edf">
+        <h4 class="titre-principal">Générateur de Code-barres</h4>
+        <h4>STOCK EDF - FARN</h4>
+        
+        <input type="text" placeholder="Désignation du produit" id="designation" class="input-designation">
+
+        <div class="search_bar">
+            <input type="text" placeholder="Entrer le code-barres..." id="text">
+            <button id="button_code_bar">Générer</button>
+        </div>
+        <div id="box">
+            <img src="barcode.png" alt="code bar">
+        </div>
+        <div id="pdf_box"></div>
+
+        <div id="historique_container">
+            <h5 id="titre_historique" style="display: none;">Derniers CODE-BARRES :</h5>
+            
+            <input type="text" id="recherche_historique" placeholder="🔍 Rechercher un code-barres" style="display: none;">
+            
+            <ul id="liste_historique"></ul>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>

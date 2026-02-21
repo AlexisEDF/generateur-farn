@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #06387a;
+    padding: 20px;
+}
+
+section {
+
+position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+img {
+    width: 250px;
+    max-width: 100%;
+}
+
+.logo-edf {
+    transform: translateY(10px);
+}
+
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.titre-principal {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.input-designation {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    outline: 0;
+    border: 1px solid #999;
+}
+
+.search_bar {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.search_bar input {
+    width: 75%;
+    padding: 8px;
+    outline: 0;
+    border: 1px solid #999;
+}
+
+button {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #ff5e12;
+    color: #fff;
+    border: 1px solid #999999;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #2212d9;
+}
+
+#button_code_bar {
+    width: 25%;
+}
+
+#box {
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#pdf_box {
+    width: 100%;
+}
+
+#pdf_box button {
+    width: 100%;
+}
+
+.error {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgb(189,92,92);
+    color: #fff;
+}
+
+/* --- NOUVEAU : STYLE DE L'HISTORIQUE --- */
+#historique_container {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+#titre_historique {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#liste_historique {
+    list-style-type: none;
+}
+
+#liste_historique li {
+    background-color: #f9f9f9;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+}
+
+#liste_historique li:hover {
+    background-color: #e2e8f0;
+    border-color: #675afe;
+}
+
+#liste_historique li .hist-des {
+    font-weight: bold;
+    color: #333;
+}
+
+#liste_historique li .hist-code {
+    color: #ff5e12;
+}
+
+/* RÉGLAGES POUR SMARTPHONES (RESPONSIVE) */
+@media (max-width: 500px) {
+    h4 {
+        font-size: 18px;
+    }
+    
+    .logo-edf {
+        width: 180px;
+        transform: translateY(0);
+    }
+
+    .search_bar {
+        flex-direction: column;
+    }
+    
+    .search_bar input {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    #button_code_bar {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* --- STYLE DU MODE SOMBRE --- */
+#dark_mode_toggle {
+    position: absolute; /* 💡 Sort l'élément du flux : il ne pousse plus rien */
+    top: 10px;          /* Distance précise du haut */
+    right: 10px;         /* Distance précise de la droite */
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;      /* Passe par-dessus tout le reste */
+    line-height: 1;     /* Évite de créer une hauteur de ligne invisible */
+}
+
+
+body.dark-theme {
+    background-color: #1a202c; /* Fond très sombre pour la page */
+}
+
+body.dark-theme section {
+    background-color: #2d3748; /* Boîte gris foncé */
+    color: #ffffff; /* Texte blanc */
+}
+
+body.dark-theme input {
+    background-color: #4a5568;
+    color: white;
+    border-color: #718096;
+}
+
+body.dark-theme #box {
+    background-color: white; /* On garde le fond blanc du code-barres pour qu'il soit scannable ! */
+}
+
+body.dark-theme #liste_historique li {
+    background-color: #4a5568;
+    color: white !important;
+    border-color: #2d3748;
+}
+
+body.dark-theme h4, body.dark-theme #titre_historique  {
+    color: #e2e8f0;
+}
+
+@media (max-width: 500px) {
+    /* NOUVEAU : On ajuste la position de l'icône pour les petits écrans */
+    #dark_mode_toggle {
+        top: 10px;
+        right: 10px;
+        font-size: 20px; /* Un peu plus petit pour ne pas gêner */
+    }
+
+    /* ... le reste de vos règles mobiles (h4, .logo-edf, etc.) ... */
+}
+
+
+/* --- STYLE DE LA BARRE DE RECHERCHE --- */
+#recherche_historique {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Évite qu'elle ne dépasse de la boîte */
+}
+
+/* On l'adapte pour le mode sombre */
+body.dark-theme #recherche_historique {
+    background-color: #4a5568 !important;
+    color: white !important;
+    border: 1px solid #718096 !important;
+}
+
+body.dark-theme #recherche_historique::placeholder {
+    color: #a0aec0; /* Rend le texte "Rechercher..." lisible en gris clair */
+}
+
+
+
+/* 💡 NOUVEAU : On cible directement le texte de la désignation en mode sombre */
+body.dark-theme #liste_historique li .hist-des {
+    color: #ffffff !important;
+}
+
+/* Optionnel : On rend le code orange un peu plus clair/fluo pour qu'il pète bien sur le fond sombre */
+body.dark-theme #liste_historique li .hist-code {
+    color: #ff8547 !important; 
+}
+
+
+
+
+
+
+
+
